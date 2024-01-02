@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\All Haulers Are Pack Animals\\Source\\All Haulers Are Pack Animals.csproj": {}
+    "C:\\Users\\Bucket\\Documents\\modding\\rimworld\\All Haulers Are Pack Animals\\Source\\All Haulers Are Pack Animals.csproj": {}
   },
   "projects": {
-    "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\All Haulers Are Pack Animals\\Source\\All Haulers Are Pack Animals.csproj": {
+    "C:\\Users\\Bucket\\Documents\\modding\\rimworld\\All Haulers Are Pack Animals\\Source\\All Haulers Are Pack Animals.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\All Haulers Are Pack Animals\\Source\\All Haulers Are Pack Animals.csproj",
+        "projectUniqueName": "C:\\Users\\Bucket\\Documents\\modding\\rimworld\\All Haulers Are Pack Animals\\Source\\All Haulers Are Pack Animals.csproj",
         "projectName": "All Haulers Are Pack Animals",
-        "projectPath": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\All Haulers Are Pack Animals\\Source\\All Haulers Are Pack Animals.csproj",
+        "projectPath": "C:\\Users\\Bucket\\Documents\\modding\\rimworld\\All Haulers Are Pack Animals\\Source\\All Haulers Are Pack Animals.csproj",
         "packagesPath": "C:\\Users\\Bucket\\.nuget\\packages\\",
-        "outputPath": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\All Haulers Are Pack Animals\\Source\\obj\\",
+        "outputPath": "C:\\Users\\Bucket\\Documents\\modding\\rimworld\\All Haulers Are Pack Animals\\Source\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
