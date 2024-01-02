@@ -26,15 +26,6 @@ namespace DB_All_Haulers_Are_Pack_Animals
             new Harmony("DecentBucket.AllHaulersArePackAnimals.patch").PatchAll();
         }
 
-        static bool CheckPawnForHaulTraining(Pawn p)
-        {
-            if (p.training != null && p.training.CanAssignToTrain(DefDatabase<TrainableDef>.GetNamed("Haul")) && p.training.HasLearned(DefDatabase<TrainableDef>.GetNamed("Haul")))
-            {
-                return true;
-            }
-            return false;
-        }
-
         static bool ShouldCountAsPackAnimal(Pawn p)
         {
             //check if the pawn can be trained for hauling
@@ -143,21 +134,15 @@ namespace DB_All_Haulers_Are_Pack_Animals
                 if (code[i].Is(OpCodes.Ldfld, AccessTools.Field(typeof(RaceProperties), nameof(RaceProperties.packAnimal))))
                 {
                     index = i - 1; //want to put the instructions before that index
-                    code[i - 1].opcode = OpCodes.Nop;
+                    code[i - 1].opcode = OpCodes.Nop; //replace the original call for the packAnimal race property which is done in 2 instructions
                     code[i].opcode = OpCodes.Nop;
-                    //pawninstruction = code[i - 2].Clone(); //the call for the pawn local variable should be 2 indeces prior
                     break;
                 }
             }
 
             var insertedInstructions = new List<CodeInstruction>
-            {
-                //get the pawn being iterated on
-                //pawninstruction,
-                //call the function, gives the pawn object from the top of the stack and replaces it with the function's return value
-                //new CodeInstruction(OpCodes.Call,AccessTools.Method(typeof(Db_AllHaulersArePackAnimals), nameof(CheckPawnForHaulTraining))),
-                //bitwise AND on the top 2 values in the stack (packAnimal from the pawn's racedef and the value returned from CheckPawnForHaulTraining)
-                //new CodeInstruction(OpCodes.Or)
+            { 
+                //the current top value of the stack SHOULD be the pawn we pass to the function
                 new CodeInstruction(OpCodes.Call,AccessTools.Method(typeof(Db_AllHaulersArePackAnimals), nameof(ShouldCountAsPackAnimal))),
             };
 

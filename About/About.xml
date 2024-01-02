@@ -3,11 +3,10 @@
 	<name>All Haulers Are Pack Animals</name>
 	<author>DecentBucket</author>
 	<supportedVersions>
-	<li>1.4</li>
+		<li>1.4</li>
 	</supportedVersions>
 	<packageId>DecentBucket.HaulersCanPack</packageId>
-	<description>Allows any animal that is trained to haul to be a pack animal.
-	</description>
+	<description> A Rimworld mod that allows animals trained to haul to be used as pack animals.</description>
 	<modDependencies>
 	<li>
 		<packageId>brrainz.harmony</packageId>

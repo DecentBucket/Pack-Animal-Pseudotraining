@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Yye0cn2QzDA03O2CInjsA0U73OP3XKHZ3R8coH1Bj4zDor1b6ZDWsyMmKa0jfVheMzmI/WbWkNXhJlH2xFkwXw==",
+  "dgSpecHash": "DNNa6nxT363FE9BRs3hRx2Pw5Gnbe3VmP4K5V54sJVquzbxBWo//HKNW///fZXLVDaiJeoGXRA49/W336e6Ruw==",
   "success": true,
-  "projectFilePath": "C:\\Steam\\steamapps\\common\\RimWorld\\Mods\\All Haulers Are Pack Animals\\Source\\All Haulers Are Pack Animals.csproj",
+  "projectFilePath": "C:\\Users\\Andrew\\Documents\\modding\\rimworld\\All Haulers Are Pack Animals\\Source\\All Haulers Are Pack Animals.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andrew\\.nuget\\packages\\krafs.rimworld.ref\\1.4.3901\\krafs.rimworld.ref.1.4.3901.nupkg.sha512",
     "C:\\Users\\Andrew\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512"
