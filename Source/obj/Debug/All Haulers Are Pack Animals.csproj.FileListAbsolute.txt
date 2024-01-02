@@ -1,0 +1,5 @@
+C:\Steam\steamapps\common\RimWorld\Mods\All Haulers Are Pack Animals\Source\obj\Debug\All Haulers Are Pack Animals.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\All Haulers Are Pack Animals\Source\obj\Debug\All Haulers Are Pack Animals.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\All Haulers Are Pack Animals\Assemblies\All Haulers Are Pack Animals.dll
+C:\Steam\steamapps\common\RimWorld\Mods\All Haulers Are Pack Animals\Source\obj\Debug\All Haulers Are Pack Animals.csproj.CopyComplete
+C:\Steam\steamapps\common\RimWorld\Mods\All Haulers Are Pack Animals\Source\obj\Debug\All Haulers Are Pack Animals.dll
