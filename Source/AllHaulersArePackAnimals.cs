@@ -7,7 +7,9 @@ using System.Reflection.Emit;
 
 namespace DB_All_Haulers_Are_Pack_Animals
 {
-    /*
+    /* 
+     * All the important stuff happens here.
+     * 
      * Notes:
      * If a trained animal loses the skill due to decay while forming a caravan, formation procceds regardless, giving items to other pawns capable of carrying items, even exceeding their carrying capacity, however the caravan will become immobile as soon as it departs. 
      * Not a problem if you are sending a caravan from the colony, but if this happens while forming a new caravan from a temporary location, the player will have to abandon some items
