@@ -4,6 +4,8 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 using System.Reflection.Emit;
+using All_Haulers_Are_Pack_Animals;
+using UnityEngine;
 
 namespace DB_All_Haulers_Are_Pack_Animals
 {
@@ -21,8 +23,33 @@ namespace DB_All_Haulers_Are_Pack_Animals
 
     [StaticConstructorOnStartup]
     [HarmonyPatch]
-    public class Db_AllHaulersArePackAnimals
+    public class Db_AllHaulersArePackAnimals : Mod
     {
+
+        Db_Haulers_Settings settings;
+
+        public Db_AllHaulersArePackAnimals(ModContentPack content) : base(content)
+        {
+            this.settings = GetSettings<Db_Haulers_Settings>();
+        }
+
+        public override string SettingsCategory()
+        {
+            return "AllHaulersCanBePackAnimalsTitle".Translate();
+        }
+
+        public override void DoSettingsWindowContents(Rect inRect)
+        {
+            Listing_Standard listing_Standard = new Listing_Standard();
+            listing_Standard.Begin(inRect);
+            listing_Standard.CheckboxLabeled("RequirePackAnimalPropName".Translate(), ref settings.requirePackAnimalProp, "RequirePackAnimalPropToolTip".Translate());
+            listing_Standard.End();
+            base.DoSettingsWindowContents(inRect);
+        }
+
+        //----START OF HARMONY PATCH CODE----
+
+
         static Db_AllHaulersArePackAnimals()
         {
             new Harmony("DecentBucket.AllHaulersArePackAnimals.patch").PatchAll();
@@ -30,12 +57,15 @@ namespace DB_All_Haulers_Are_Pack_Animals
 
         static bool ShouldCountAsPackAnimal(Pawn p)
         {
+            //Get the mod setting
+            bool packAnimalPropRequired = LoadedModManager.GetMod<Db_AllHaulersArePackAnimals>().GetSettings<Db_Haulers_Settings>().requirePackAnimalProp;
+
             //check if the pawn can be trained for hauling
             if(p.training != null && p.training.CanAssignToTrain(DefDatabase<TrainableDef>.GetNamed("Haul")))
             {
                 if (p.training.HasLearned(DefDatabase<TrainableDef>.GetNamed("Haul")))
                 {
-                    return true;
+                    return packAnimalPropRequired ? p.RaceProps.packAnimal : true;
                 }
                 return false;
             }
