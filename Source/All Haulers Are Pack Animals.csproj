@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AllHaulersArePackAnimals.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="Db_Haulers_Settings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
