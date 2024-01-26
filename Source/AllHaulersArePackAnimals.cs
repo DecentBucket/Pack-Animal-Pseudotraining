@@ -43,29 +43,31 @@ namespace DB_All_Haulers_Are_Pack_Animals
         {
             Listing_Standard listing_Standard = new Listing_Standard();
             listing_Standard.Begin(inRect);
+            listing_Standard.GapLine();
             listing_Standard.CheckboxLabeled("RequirePackAnimalPropName".Translate(), ref settings.requirePackAnimalProp, "RequirePackAnimalPropToolTip".Translate());
-            listing_Standard.ColumnWidth += 35f;
+            listing_Standard.Gap(35f);
             Text.Font = GameFont.Medium;
+            Text.Anchor = TextAnchor.MiddleCenter;
             listing_Standard.Label("RequiredTrainingsSectionTitle".Translate());
             Text.Font = GameFont.Small;
-            listing_Standard.ColumnWidth -= 35f;
             listing_Standard.GapLine();
-            listing_Standard.Gap();
+
+            listing_Standard.Label("RequiredTrainingsSectionDesc".Translate());
+            Text.Anchor = TextAnchor.UpperLeft;
+            listing_Standard.Gap(5f);
             for (int i = 0; i < settings.LoadedTrainables.Count; i++)
             {
                 TrainableDef key = TrainableUtility.TrainableDefsInListOrder[i];
-                //TrainableDef key = settings.loadedTrainables.ElementAt(i).Key;
                 bool value = settings.LoadedTrainables[key];
                 listing_Standard.CheckboxLabeled((string)key.LabelCap, ref value, "RequiredTrainingsSectionToolTip".Translate(key.LabelCap));
                 settings.trainableNames[key.defName] = value;
                 settings.LoadedTrainables[key] = value;
-                
             }
             listing_Standard.End();
             base.DoSettingsWindowContents(inRect);
         }
 
-        //----START OF HARMONY PATCH CODE----
+        //----START OF HARMONY PATCH CODE----\\
 
         static bool ShouldCountAsPackAnimal(Pawn p)
         {
