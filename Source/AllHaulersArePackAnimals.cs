@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using All_Haulers_Are_Pack_Animals;
 using HarmonyLib;
 using RimWorld;
-using Verse;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection.Emit;
-using All_Haulers_Are_Pack_Animals;
 using UnityEngine;
+using Verse;
 
 namespace DB_All_Haulers_Are_Pack_Animals
 {
@@ -39,6 +39,8 @@ namespace DB_All_Haulers_Are_Pack_Animals
             return "AllHaulersCanBePackAnimalsTitle".Translate();
         }
 
+        //TODO: Recursive check setting function so the training selection works like the in-game training tab
+
         public override void DoSettingsWindowContents(Rect inRect)
         {
             Listing_Standard listing_Standard = new Listing_Standard();
@@ -58,10 +60,13 @@ namespace DB_All_Haulers_Are_Pack_Animals
             for (int i = 0; i < settings.LoadedTrainables.Count; i++)
             {
                 TrainableDef key = TrainableUtility.TrainableDefsInListOrder[i];
-                bool value = settings.LoadedTrainables[key];
-                listing_Standard.CheckboxLabeled((string)key.LabelCap, ref value, "RequiredTrainingsSectionToolTip".Translate(key.LabelCap));
-                settings.trainableNames[key.defName] = value;
-                settings.LoadedTrainables[key] = value;
+                if (key.defName != "Tameness")
+                {
+                    bool value = settings.LoadedTrainables[key];
+                    listing_Standard.CheckboxLabeled((string)key.LabelCap, ref value, "RequiredTrainingsSectionToolTip".Translate(key.LabelCap));
+                    settings.trainableNames[key.defName] = value;
+                    settings.LoadedTrainables[key] = value;
+                }
             }
             listing_Standard.End();
             base.DoSettingsWindowContents(inRect);
@@ -168,9 +173,9 @@ namespace DB_All_Haulers_Are_Pack_Animals
         //this patch prevents pawns from loading items onto animals that aren't marked to carry anything
         [HarmonyPatch(typeof(JobDriver_PrepareCaravan_GatherItems), nameof(JobDriver_PrepareCaravan_GatherItems.IsUsableCarrier))]
         [HarmonyPostfix]
-        static void IsUsableCarrier(ref bool __result,ref Pawn p)
+        static void IsUsableCarrier(ref bool __result, ref Pawn p)
         {
-            if(p.RaceProps.Animal)
+            if (p.RaceProps.Animal)
             {
                 __result = ShouldCountAsPackAnimal(p) && !MassUtility.IsOverEncumbered(p);
             }

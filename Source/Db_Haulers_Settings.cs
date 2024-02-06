@@ -1,10 +1,7 @@
 ﻿using DB_All_Haulers_Are_Pack_Animals;
 using RimWorld;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace All_Haulers_Are_Pack_Animals
@@ -24,13 +21,13 @@ namespace All_Haulers_Are_Pack_Animals
         {
             get
             {
-                if(cachedTrainables.NullOrEmpty())
+                if (cachedTrainables.NullOrEmpty())
                 {
                     for (int i = 0; i < trainableNames.Count; i++)
                     {
-                        
+
                         TrainableDef namedSilentFail = DefDatabase<TrainableDef>.GetNamedSilentFail(trainableNames.ElementAt(i).Key);
-                        if (namedSilentFail != null )
+                        if (namedSilentFail != null)
                         {
                             cachedTrainables.Add(namedSilentFail, trainableNames.ElementAt(i).Value);
                         }
@@ -61,9 +58,8 @@ namespace All_Haulers_Are_Pack_Animals
             {
                 settings.trainableNames = new Dictionary<string, bool>();
             }
-            foreach (TrainableDef item in DefDatabase<TrainableDef>.AllDefs.ToList())
+            foreach (TrainableDef item in DefDatabase<TrainableDef>.AllDefs.Where((TrainableDef x) => x.defName != "Tameness").ToList())
             {
-                Log.Message(item.ToString() + " " + (settings.trainableNames != null).ToString());
                 if (item != null && !settings.trainableNames.ContainsKey(item.defName))
                 {
                     if (item.defName == "Haul")
@@ -81,11 +77,11 @@ namespace All_Haulers_Are_Pack_Animals
                 }
             }
         }
-        
+
         static Db_Haulers_Startup()
         {
             CheckTrainables();
         }
-        
+
     }
 }
