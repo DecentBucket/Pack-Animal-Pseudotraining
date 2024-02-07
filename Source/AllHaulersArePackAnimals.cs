@@ -39,7 +39,7 @@ namespace DB_All_Haulers_Are_Pack_Animals
             return "AllHaulersCanBePackAnimalsTitle".Translate();
         }
 
-        //TODO: Recursive check setting function so the training selection works like the in-game training tab
+        //TODO(?): Recursive check setting function so the training selection works like the in-game training tab
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
@@ -48,6 +48,7 @@ namespace DB_All_Haulers_Are_Pack_Animals
             listing_Standard.GapLine();
             listing_Standard.CheckboxLabeled("RequirePackAnimalPropName".Translate(), ref settings.requirePackAnimalProp, "RequirePackAnimalPropToolTip".Translate());
             listing_Standard.Gap(35f);
+
             Text.Font = GameFont.Medium;
             Text.Anchor = TextAnchor.MiddleCenter;
             listing_Standard.Label("RequiredTrainingsSectionTitle".Translate());
