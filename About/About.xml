@@ -6,7 +6,7 @@
 		<li>1.4</li>
 	</supportedVersions>
 	<packageId>DecentBucket.HaulersCanPack</packageId>
-	<description>Allows animals trained to haul to be used as pack animals.</description>
+	<description>A Rimworld mod that allows animals to be used as pack animals based on set trainables that can be set by the player.</description>
 	<modDependencies>
 	<li>
 		<packageId>brrainz.harmony</packageId>
