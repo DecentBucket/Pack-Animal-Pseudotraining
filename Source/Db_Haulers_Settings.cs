@@ -58,7 +58,7 @@ namespace All_Haulers_Are_Pack_Animals
             {
                 settings.trainableNames = new Dictionary<string, bool>();
             }
-            foreach (TrainableDef item in DefDatabase<TrainableDef>.AllDefs.Where((TrainableDef x) => x.defName != "Tameness").ToList())
+            foreach (TrainableDef item in DefDatabase<TrainableDef>.AllDefs.ToList())
             {
                 if (item != null && !settings.trainableNames.ContainsKey(item.defName))
                 {
