@@ -1,5 +1,5 @@
 <LanguageData>
-	<AllHaulersCanBePackAnimalsTitle>All Haulers Can Be Pack Animals</AllHaulersCanBePackAnimalsTitle>
+	<AllHaulersCanBePackAnimalsTitle>Pack Animal Training (kinda)</AllHaulersCanBePackAnimalsTitle>
 	<RequirePackAnimalPropName>Animal race needs to be a pack animal:</RequirePackAnimalPropName>
 	<RequirePackAnimalPropToolTip>Note that an animal needs the pack animal property to have visible bags on them when loaded with items. The mod will function regardless of this setting, however.</RequirePackAnimalPropToolTip>
 	<RequiredTrainingsSectionTitle>Training Required</RequiredTrainingsSectionTitle>
