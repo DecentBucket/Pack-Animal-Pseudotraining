@@ -8,3 +8,4 @@ C:\Users\Bucket\Documents\modding\rimworld\All Haulers Are Pack Animals\Source\o
 C:\Users\Bucket\Documents\modding\rimworld\All Haulers Are Pack Animals\Source\obj\Debug\All Haulers Are Pack Animals.csproj.CoreCompileInputs.cache
 C:\Users\Bucket\Documents\modding\rimworld\All Haulers Are Pack Animals\Source\obj\Debug\All Haulers Are Pack Animals.csproj.CopyComplete
 C:\Users\Bucket\Documents\modding\rimworld\All Haulers Are Pack Animals\Source\obj\Debug\All Haulers Are Pack Animals.dll
+C:\Users\Bucket\Documents\modding\rimworld\All Haulers Are Pack Animals\1.5\Assemblies\All Haulers Are Pack Animals.dll

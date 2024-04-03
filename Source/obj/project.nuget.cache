@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "DNNa6nxT363FE9BRs3hRx2Pw5Gnbe3VmP4K5V54sJVquzbxBWo//HKNW///fZXLVDaiJeoGXRA49/W336e6Ruw==",
+  "dgSpecHash": "itRLWEcdeD+dJkGuVDt0SlhNrn3qc3Qd4jG3tuT9yEdVSqiwCNmpOfms3KJMunb9occGKIgS0xdoHAIrYdEKqQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Bucket\\Documents\\modding\\rimworld\\All Haulers Are Pack Animals\\Source\\All Haulers Are Pack Animals.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Bucket\\.nuget\\packages\\krafs.rimworld.ref\\1.4.3901\\krafs.rimworld.ref.1.4.3901.nupkg.sha512",
-    "C:\\Users\\Bucket\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512"
+    "C:\\Users\\Bucket\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4052-beta\\krafs.rimworld.ref.1.5.4052-beta.nupkg.sha512",
+    "C:\\Users\\Bucket\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512"
   ],
   "logs": []
 }
