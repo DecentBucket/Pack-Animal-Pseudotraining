@@ -4,6 +4,7 @@
 	<author>DecentBucket</author>
 	<supportedVersions>
 		<li>1.4</li>
+		<li>1.5</li>
 	</supportedVersions>
 	<packageId>DecentBucket.HaulersCanPack</packageId>
 	<description>A Rimworld mod that allows animals to be used as pack animals based on set trainables that can be set by the player.</description>
