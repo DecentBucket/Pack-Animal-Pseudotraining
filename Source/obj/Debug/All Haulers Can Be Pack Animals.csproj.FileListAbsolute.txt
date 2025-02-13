@@ -1,6 +1,0 @@
-C:\Steam\steamapps\common\RimWorld\Mods\All Haulers Can Be Pack Animals\Source\bin\Debug\All Haulers Can Be Pack Animals.dll
-C:\Steam\steamapps\common\RimWorld\Mods\All Haulers Can Be Pack Animals\Source\bin\Debug\All Haulers Can Be Pack Animals.pdb
-C:\Steam\steamapps\common\RimWorld\Mods\All Haulers Can Be Pack Animals\Source\obj\Debug\All Haulers Can Be Pack Animals.csproj.AssemblyReference.cache
-C:\Steam\steamapps\common\RimWorld\Mods\All Haulers Can Be Pack Animals\Source\obj\Debug\All Haulers Can Be Pack Animals.csproj.CoreCompileInputs.cache
-C:\Steam\steamapps\common\RimWorld\Mods\All Haulers Can Be Pack Animals\Source\obj\Debug\All Haulers Can Be Pack Animals.dll
-C:\Steam\steamapps\common\RimWorld\Mods\All Haulers Can Be Pack Animals\Source\obj\Debug\All Haulers Can Be Pack Animals.pdb
